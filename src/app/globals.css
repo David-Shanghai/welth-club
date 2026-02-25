@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --bg-page: #0A0A0A;
+  --bg-surface: #141414;
+  --bg-card: #1A1A1A;
+  --bg-input: #1A1A1A;
+  --border: #2A2A2A;
+  --gold: #C9A962;
+  --gold-40: #C9A96266;
+  --gold-subtle: #C9A96220;
+  --text-on-gold: #0A0A0A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #848484;
+  --text-tertiary: #6A6A6A;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  .font-heading {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .font-body {
+    font-family: "Inter", sans-serif;
+  }
+
+  .font-mono {
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  .material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  }
+}
