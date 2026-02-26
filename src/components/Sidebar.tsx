@@ -10,6 +10,7 @@ import {
   User,
   LogOut,
 } from "lucide-react";
+import { useAuth } from "@/context/AuthContext";
 
 const navItems = [
   { href: "/", label: "ダッシュボード", icon: LayoutDashboard },
@@ -21,6 +22,7 @@ const navItems = [
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const { logout } = useAuth();
 
   return (
     <aside
@@ -92,7 +94,10 @@ export default function Sidebar() {
       {/* Bottom Section */}
       <div className="flex flex-col gap-4 px-6 pb-5">
         <div className="h-px bg-[var(--border)] w-full" />
-        <button className="flex items-center gap-[14px] px-[14px] py-[10px] w-full text-[var(--text-tertiary)] hover:text-[var(--text-secondary)] transition-colors">
+        <button
+          onClick={logout}
+          className="flex items-center gap-[14px] px-[14px] py-[10px] w-full text-[var(--text-tertiary)] hover:text-[var(--text-secondary)] transition-colors"
+        >
           <LogOut size={20} strokeWidth={1.5} />
           <span className="font-body text-[14px] font-normal">ログアウト</span>
         </button>

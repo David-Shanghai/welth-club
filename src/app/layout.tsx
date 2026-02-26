@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AuthProvider } from "@/context/AuthContext";
 
 export const metadata: Metadata = {
   title: "WEALTH CLUB",
@@ -22,7 +23,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body h-full bg-[var(--bg-page)] text-[var(--text-primary)] antialiased">
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
