@@ -5,6 +5,11 @@ import { AuthProvider } from "@/context/AuthContext";
 export const metadata: Metadata = {
   title: "WEALTH CLUB",
   description: "WELTHクラブ会員ポータル",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
